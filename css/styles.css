@@ -96,7 +96,11 @@ body {
   flex-basis: calc((100% - 60px) / 3);
 }
 
-.portfolio-list .item:hover {
+.portfolio-list .link {
+  display: block;
+}
+
+.portfolio-list .link:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -178,16 +182,15 @@ img {
 .email:focus,
 .phone:hover,
 .phone:focus {
-  color: var(--accent-color);
   fill: var(--accent-color);
+  color: var(--accent-color);
 }
 
 /* svg-иконки в HEADER-e */
 .envelope,
 .smartphone {
   vertical-align: middle;
-  /* align-items: center; */
-  color: currentColor;
+  fill: currentColor;
   margin-right: 10px;
 }
 
@@ -562,12 +565,13 @@ p {
   text-transform: uppercase;
   color: var(--white-color);
   margin-bottom: 20px;
-  margin-top: 12px;
+  /* margin-top: 12px; */
 }
 
 .footer-wrap {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
+  align-items: baseline;
 }
 
 .icon-list {
